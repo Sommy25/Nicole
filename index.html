@@ -48,7 +48,14 @@
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
-
+    button{
+        font-weight: 700;
+        color: white;
+        background: #ff69b4;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+    }
     p {
       color: #333;
       font-size: 1.1rem;
@@ -56,7 +63,7 @@
     }
 
     .small {
-      margin-top: 5rem;  
+      margin-top: 2rem;  
       font-size: 0.95rem;
       color: #666;
     }
@@ -89,16 +96,14 @@
     <video>
         <source src="./videoplayback.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video>
+    </video>
+    <button onclick="document.getElementById('bg-audio').play()">Happy Birthday</button>
+    <audio id="bg-audio" loop>
+        <source src="./happy-birthday-314197.mp3" type="audio/mpeg">
+    </audio>
     <p class="small">You gave me my first ever birthday gift. I really cant say thank you enough</p>
   </div>
-
-  <Background music>
-  <audio autoplay loop>
-    <source src="./happy-birthday-314197.mp3" type="audio/mpeg">
-    Your browser does not support audio.
-  </audio>
-
+  
   <script>
     const confetti = document.querySelector('.confetti');
     for (let i = 0; i < 50; i++) {
