@@ -19,6 +19,9 @@
     }
 
     .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       z-index: 1;
       padding: 20px;
@@ -36,7 +39,10 @@
       border: 4px solid #ff69b4;
       margin-bottom: 20px;
     }
-
+    video {
+        width: 100%;
+        height: 10rem;
+    }
     h1 {
       color: #d6336c;
       font-size: 2.5rem;
@@ -50,7 +56,7 @@
     }
 
     .small {
-      margin-top: 15rem;  
+      margin-top: 5rem;  
       font-size: 0.95rem;
       color: #666;
     }
@@ -79,15 +85,19 @@
   <div class="container">
     <img src="./IMG-20250125-WA0001.jpg" alt="Nicole">
     <h1>Happy Birthday Nicole!</h1>
-    <p>I can’t get you a gift right now, but I really hope this’ll do for now until I get a job.</p>
-    <p class="small">You gave me my first ever birthday gift. I’ll be sure to return the favour.</p>
+    <p>I can’t get you a gift right now because I'm poor af, but here's this until I get a job.</p>
+    <video autoplay loop>
+        <source src="./videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <p class="small">You gave me my first ever birthday gift. I really can't say thank you enough</p>
   </div>
 
   <!-- Background music -->
-  <audio autoplay loop>
+  <!-- <audio autoplay loop>
     <source src="./happy-birthday-314197.mp3" type="audio/mpeg">
     Your browser does not support audio.
-  </audio>
+  </audio> -->
 
   <script>
     const confetti = document.querySelector('.confetti');
